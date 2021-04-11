@@ -1,41 +1,31 @@
 {
+  "$id": "https://bbm.bmssearch.net/schemas/v1/updates.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "updates",
 
   "type": "object",
-  "required": ["version", "id", "name"],
+  "required": ["version", "timestamp", "updates"],
   "additionalProperties": false,
   "properties": {
     "version": {
       "const": 1,
       "description": "Bms Bundle Spec version"
     },
-    "id": {
-      "type": "string",
-      "description": "domain scoped identifier"
-    },
-    "name": {
-      "type": "string",
-      "description": "name"
-    },
-    "website_url": {
-      "type": "string",
-      "description": "website"
-    },
-    "updates_url": {
-      "type": "string",
-      "description": "spec url to check for updates on bmses in this group"
+    "timestamp": {
+      "type": "integer",
+      "description": "current timestamp in millisec"
     },
     "bmses": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/group_bms"
+        "$ref": "#/definitions/updates_bms"
       },
-      "description": "bmses in this group"
+      "description": "bmses which have been updated"
     }
   },
 
   "definitions": {
-    "group_bms": {
+    "updates_bms": {
       "type": "object",
       "required": ["id", "url"],
       "additionalProperties": false,
@@ -47,6 +37,14 @@
         "url": {
           "type": "string",
           "description": "spec url for the bms"
+        },
+        "group_id": {
+          "type": "string",
+          "description": "domain scoped identifier for the group"
+        },
+        "updated_at": {
+          "type": "integer",
+          "description": "timestamp in millisec"
         }
       }
     }

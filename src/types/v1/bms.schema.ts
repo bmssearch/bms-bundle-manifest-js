@@ -7,13 +7,21 @@
 
 export interface Bms {
   /**
-   * Bms Bundle Spec version
+   * Bms Bundle Manifest Spec version
    */
   version: 1;
   /**
    * domain scoped identifier
    */
   id: string;
+  /**
+   * title
+   */
+  title: string;
+  /**
+   * bms manifests which can be treated as the same bms
+   */
+  aliases?: Alias[];
   /**
    * website
    */
@@ -29,9 +37,20 @@ export interface Bms {
   /**
    * resources for this bms
    */
-  resources: BmsResource[];
+  resources: Resource[];
 }
-export interface BmsResource {
+export interface Alias {
+  /**
+   * domain to which the alias manifest belongs
+   */
+  domain: string;
+  /**
+   * domain scoped id of the alias manifest
+   */
+  id: string;
+  [k: string]: unknown;
+}
+export interface Resource {
   /**
    * url for the resource
    */

@@ -1,7 +1,7 @@
-export * from './types/v1/bms';
-export * from './types/v1/group';
-export * from './types/v1/updates';
+export * from './types/v1/bms.schema';
+export * from './types/v1/group.schema';
+export * from './types/v1/updates.schema';
 
-export * from './main/bms';
-export * from './main/group';
-export * from './main/updates';
+export * from './main/BmsManifest';
+export * from './main/GroupManifest';
+export * from './main/UpdateManifest';

@@ -1,13 +1,14 @@
 {
-  "name": "@bmssearch/bms-bundle-spec",
-  "version": "1.0.0",
-  "description": "Bms Bundle Spec utilities for JavaScript",
+  "name": "@bmssearch/bms-bundle-manifest",
+  "version": "0.0.1",
+  "description": "Bms Bundle Manifest utilities for JavaScript",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "schema": "rm -rf ./src/schema&&cpx \"./bms-bundle-spec/schema/**/*\" ./src/schema",
-    "generate": "rm -rf ./src/model&&json2ts -i src/schema/ -o src/types/&&bash rename.sh",
-    "vendor": "npm run schema&&npm run generate",
+    "schema:pull": "rm -rf ./bms-bundle-manifest-spec&&git clone https://github.com/bmssearch/bms-bundle-manifest-spec.git",
+    "schema:copy": "rm -rf ./src/schema&&cpx \"./bms-bundle-manifest-spec/schemas/**/*\" ./src/schemas",
+    "schema:generate": "rm -rf ./src/model&&json2ts -i src/schemas/ -o src/types/&&bash rename.sh",
+    "vendor": "npm run schema:pull&&npm run schema:copy&&npm run schema:generate",
     "build": "tsc&&cpx src/schema/**/* lib/schema"
   },
   "author": "bmssearch",

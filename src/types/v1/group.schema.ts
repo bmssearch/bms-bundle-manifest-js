@@ -19,6 +19,10 @@ export interface Group {
    */
   name: string;
   /**
+   * group manifests which can be treated as the same group
+   */
+  aliases?: GroupAlias[];
+  /**
    * website
    */
   website_url?: string;
@@ -30,6 +34,17 @@ export interface Group {
    * bmses in this group
    */
   bmses?: GroupBms[];
+}
+export interface GroupAlias {
+  /**
+   * domain to which the alias manifest belongs
+   */
+  domain: string;
+  /**
+   * domain scoped id of the alias manifest
+   */
+  id: string;
+  [k: string]: unknown;
 }
 export interface GroupBms {
   /**
