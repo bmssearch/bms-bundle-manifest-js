@@ -1,6 +1,6 @@
 {
   "name": "@bmssearch/bms-bundle-manifest",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Bms Bundle Manifest utilities for JavaScript",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "schema:copy": "rm -rf ./src/schema&&cpx \"./bms-bundle-manifest-spec/schemas/**/*\" ./src/schemas",
     "schema:generate": "rm -rf ./src/model&&json2ts -i src/schemas/ -o src/types/&&bash rename.sh",
     "vendor": "npm run schema:pull&&npm run schema:copy&&npm run schema:generate",
-    "build": "tsc&&cpx src/schema/**/* lib/schema",
+    "build": "rm -rf ./lib&&tsc&&cpx src/schemas/**/* lib/schemas",
     "prepublishOnly": "npm run build"
   },
   "author": "bmssearch",

@@ -4,4 +4,4 @@ export * from './types/v1/updates.schema';
 
 export * from './main/BmsManifest';
 export * from './main/GroupManifest';
-export * from './main/UpdateManifest';
+export * from './main/UpdatesManifest';

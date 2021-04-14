@@ -21,15 +21,15 @@ export interface Bms {
   /**
    * bms manifests which can be treated as the same bms
    */
-  aliases?: Alias[];
+  aliases?: BmsAlias[];
   /**
    * website
    */
   website_url?: string;
   /**
-   * spec url for the group to which this bms belongs
+   * spec urls for the group to which this bms belongs
    */
-  group_url?: string;
+  group_urls?: string[];
   /**
    * spec url to check for updates on this bms
    */
@@ -37,9 +37,9 @@ export interface Bms {
   /**
    * resources for this bms
    */
-  resources: Resource[];
+  resources: BmsResource[];
 }
-export interface Alias {
+export interface BmsAlias {
   /**
    * domain to which the alias manifest belongs
    */
@@ -50,7 +50,7 @@ export interface Alias {
   id: string;
   [k: string]: unknown;
 }
-export interface Resource {
+export interface BmsResource {
   /**
    * url for the resource
    */

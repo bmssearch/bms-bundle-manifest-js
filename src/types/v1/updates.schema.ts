@@ -31,7 +31,7 @@ export interface UpdatesBms {
   /**
    * domain scoped identifier for the group
    */
-  group_id?: string;
+  group_ids?: string[];
   /**
    * timestamp in millisec
    */
