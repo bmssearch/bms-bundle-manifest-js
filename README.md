@@ -7,3 +7,9 @@ helper for [BMS Bundle Manifest](https://github.com/bmssearch/bms-bundle-manifes
 - TypeScript support
 - Manifest validation
 - Manifest version migration
+
+## Installation
+
+```
+npm i @bmssearch/bms-bundle-manifest
+```
