@@ -13,7 +13,7 @@ jobs:
           node-version: '14'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
-      - run: npm publish --access public --dry-run
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -21,6 +21,6 @@ jobs:
         with:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@bmssearch'
-      - run: npm publish --dry-run
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
