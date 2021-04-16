@@ -1,4 +1,4 @@
-import * as schemaV1 from '../schemas/v1/Updates.schema.json';
+import * as schemaV1 from '../../schemas/v1/Updates.schema.json';
 
 import { UpdatesLatest } from './latest';
 import { Updates as UpdatesV1 } from '../../types/v1/updates.schema';

@@ -1,4 +1,4 @@
-import * as schemaV1 from '../schemas/v1/Group.schema.json';
+import * as schemaV1 from '../../schemas/v1/Group.schema.json';
 
 import { GroupLatest } from './latest';
 import { Group as GroupV1 } from '../../types/v1/group.schema';

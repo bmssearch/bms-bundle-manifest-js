@@ -1,4 +1,4 @@
-import * as schemaV1 from '../schemas/v1/bms.schema.json';
+import * as schemaV1 from '../../schemas/v1/bms.schema.json';
 
 import { BmsLatest } from './latest';
 import { Bms as BmsV1 } from '../../types/v1/bms.schema';
