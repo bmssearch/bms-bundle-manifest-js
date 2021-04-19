@@ -54,5 +54,5 @@ export interface GroupBms {
   /**
    * bmanifest url for the bms
    */
-  manifest_url?: string;
+  manifest_url: string;
 }
