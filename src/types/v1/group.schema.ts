@@ -27,9 +27,9 @@ export interface Group {
    */
   website_url?: string;
   /**
-   * spec url to check for updates on bmses in this group
+   * manifest url to check for updates on bmses in this group
    */
-  updates_url?: string;
+  updates_manifest_url?: string;
   /**
    * bmses in this group
    */
@@ -52,7 +52,7 @@ export interface GroupBms {
    */
   id: string;
   /**
-   * spec url for the bms
+   * bmanifest url for the bms
    */
-  url: string;
+  manifest_url?: string;
 }

@@ -27,13 +27,13 @@ export interface Bms {
    */
   website_url?: string;
   /**
-   * spec urls for the group to which this bms belongs
+   * manifest urls for groups to which this bms belongs
    */
-  group_urls?: string[];
+  group_manifest_urls?: string[];
   /**
-   * spec url to check for updates on this bms
+   * manifest url to check for updates on this bms
    */
-  updates_url?: string;
+  updates_manifest_url?: string;
   /**
    * resources for this bms
    */

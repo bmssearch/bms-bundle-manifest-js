@@ -11,10 +11,6 @@ export interface Updates {
    */
   version: 1;
   /**
-   * current timestamp in millisec
-   */
-  timestamp: number;
-  /**
    * bmses which have been updated
    */
   bmses?: UpdatesBms[];
@@ -25,9 +21,9 @@ export interface UpdatesBms {
    */
   id: string;
   /**
-   * spec url for the bms
+   * manifest url for the bms
    */
-  url: string;
+  manifest_url: string;
   /**
    * domain scoped identifier for the group
    */
