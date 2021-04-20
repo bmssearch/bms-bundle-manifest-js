@@ -13,7 +13,7 @@ export interface Updates {
   /**
    * bmses which have been updated
    */
-  bmses?: UpdatesBms[];
+  bmses: UpdatesBms[];
 }
 export interface UpdatesBms {
   /**

@@ -1,6 +1,6 @@
 {
   "name": "@bmssearch/bms-bundle-manifest",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Bms Bundle Manifest utilities for JavaScript",
   "main": "lib/index.js",
   "scripts": {
